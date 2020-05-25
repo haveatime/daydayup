@@ -1,0 +1,26 @@
+1.vs2015安装的是vs2015.pro_chs.
+win10系统,安装的是cn_windows_10_multiple_editions_version_1511_updated_feb_2016_x86_dvd_8380074,使用小马win10永久激活工具(KMSpico_V10.8_XiTongZhiJia)激活.
+
+2.python安装的是python-3.6.0,更改python的安装位置为C:\Python\Python36,不要选中增加PATH环境变量的选项,
+在安装完成后需要增加C:\Python\Python36\目录到PATH中.
+
+3.perl安装的是strawberry-perl-5.24.1.1-32bit
+
+4.qt安装的是qt-everywhere-opensource-src-5.8.0,需要先安装python和perl,解压后得到目录qt-everywhere-opensource-src-5.8.0,
+然后打开“VS2015 开发人员命令提示”窗口,
+进入到该目录执行configure -prefix C:\Qt命令,然后执行nmake编译,
+最后nmake install安装到C:Qt\目录.
+
+5.protobuf安装的是protobuf-2.5.0,解压后得目录protobuf-2.5.0,然后打开vsprojects目录中的protobuf.sln,编译
+如果碰到编译错误提示min max找不到,增加头文件#include <algorithm>,继续编译成功.
+如果碰到<hash_map>和<hash_set>的编译错误,则在项目中增加宏定义_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS,继续编译成功.
+在C盘目录下建立目录protobuf.
+在vsprojects目录下执行extract_includes.bat得到include文件夹,把该文件夹移动到C:\protobuf目录下.
+在C:\protobuf目录下增加bin目录.
+把vsprojects\Debug\protoc.exe和libprotobuf.lib文件拷贝到C:\protobuf\bin目录下.
+
+6.系统变量增加
+PATH环境变量C:\Python\Python36\;C:\Qt\bin\;C:\protobuf\bin
+QTINCLUDE=C:\Qt\include\
+PROTOBUF_ROOT=C:\protobuf\
+ABCPLAT_ROOT=D:\workplat\abcplat\
