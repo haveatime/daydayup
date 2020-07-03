@@ -1,0 +1,25 @@
+一, 安装dbus
+https://sourceforge.net/projects/windbus/files/windbus/1.2.4/
+下载dbus-msvc-1.2.4-1-bin.tar.bz2和dbus-msvc-1.2.4-1-lib.tar.bz2
+需要在linux下解压bz2包, 然后把bin,etc,include,lib,manifest目录拷贝到c:\windbus目录下,
+PATH环境变量增加c:\windbus\bin
+
+需要源码可以下载dbus-msvc-1.2.4-1-1-src.tar.gz2
+
+二, 安装expat
+https://sourceforge.net/projects/expat/files/expat_win32/2.1.0
+下载expat-win32bin-2.1.0.exe并安装
+PATH环境变量增加C:\Program Files (x86)\Expat 2.1.0\Bin
+
+三, 编译运行pingpong
+qt-everywhere-opensource-src-5.6.3\qtbase\examples\dbus\pingpong目录下编译pingpong，
+更改ping.pro和pong.pro，增加CONFIG+=console
+编译成功后,pushd到pingpong\debug目录下运行
+
+运行pong，会提示create process "C:\windbus\bin\dbus-daemon.exe" "C:\windbus\bin\dbus-daemon.exe"  --session
+然后运行ping hello, 会提示Reply was: ping("hello") got called, 说明成功。
+
+
+或者pushd C:\windbus\bin, 手动运行dbus-daemon --session，然后再运行pong和ping。
+
+
