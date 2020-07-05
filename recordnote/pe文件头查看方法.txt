@@ -1,0 +1,20 @@
+一，下载total command
+http://totalcmd.net/plugring/totalcmd.html
+得到tcmd951x32.exe
+
+二，下载插件
+http://totalcmd.net/plugring/peviewer.html
+得到wlx_peviewer2.0.rar，解压缩得到wlx_peviewer2.0文件夹，文件夹内的PEViewer.wlx就是一个查看程序插件（Lister Plugins）。
+
+三，更多插件
+http://totaolcmd.net/directory/lister.html
+
+四，安装插件
+选项/设置/插件，查看系统插件/设置/添加
+或者双击wlx_peviewer2.0文件夹中的pluginst.inf
+
+五，使用
+在total commander里左侧栏里找到exe文件，然后按F3，即可弹出peviewer。
+例如：在Headers，Sections标签下，查看Headers的IMAGE_NT_HEADERS的IMAGE_OPTIONAL_HEADER的Subsyste
+如果该值是Windows GUI说明是窗口程序，如果该值是Windows Console说明是控制台程序。
+
